@@ -22,6 +22,7 @@ body {
 p {
     font-size: 14px;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: center;
     line-height: 1.75;
     color: white;
 }
@@ -179,8 +180,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #fed136;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: white;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -245,7 +246,7 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default .navbar-brand {
-        font-size: 2em;
+        font-size: 3em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
