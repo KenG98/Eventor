@@ -9,7 +9,13 @@ body {
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-image: url(/header-bg2.jpg);
 }
-
+#contacttext{
+    font-size: 22px
+}
+button{
+    color: black;
+    text-align: center;
+}
 
 .text-muted {
     color: #777;
