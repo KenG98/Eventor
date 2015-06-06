@@ -17,8 +17,6 @@ Template.makeevent.events({
       //necessary for emailing
       var eventID = Events.find().count();
       var eventPass = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10);
-      //might have to change address in message
-      // var message = "<html><p>You've made an event! <br>Your event ID: " + eventID + "<br>Your event password: " + eventPass + "<br>Click on this link to manage the event: eventor.meteor.com/manageevent?eventID="+eventID+"&eventPass="+eventPass+"</p></html>"
       var newEvent = {
         eventID: eventID,
         eventPassword: eventPass,
