@@ -8,6 +8,3 @@ meteor-platform
 autopublish
 insecure
 iron:router
-jquery
-bootstrap
-mizzao:bootstrap-3
