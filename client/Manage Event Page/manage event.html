@@ -1,3 +1,22 @@
 <template name="manageevent">
+	{{#unless loggedInToEdit}}
+	{{> loginToEdit}}
+	{{else}}
+	{{>editevent}}
+	{{/unless}}
+</template>
 
+<template name="editevent">
+
+</template>
+
+<template name="loginToEdit">
+	<p>Log in to edit. </p>
+	<form class="logInToEdit">
+		<p>
+			Event ID: <input type="text" name="eventIDBox"/> <br>
+			Event Password: <input type="text" name="eventPasswordBox"/> <br>
+			<input type="submit">
+		</p>
+	</form>
 </template>

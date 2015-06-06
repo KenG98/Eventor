@@ -4,8 +4,8 @@ Meteor.startup(function(){
 		insert: function (userId, item) {
 			// might have to change address in message
 			var linkToSend = "keventer.meteor.com/manageevent?eventID="+item.eventID+"&eventPass="+item.eventPassword;
-			var theLink = "<a href='" + linkToSend + "'>" + linkToSend + "</a>";
-			var message = "You made the event '" + item.eventName + "' \nEvent ID: " + item.eventID + "\nEvent Password: " + item.eventPassword + "\nClick here to manage your event: " + theLink;
+			// var theLink = "<a href='" + linkToSend + "'>" + linkToSend + "</a>";
+			var message = "You made the event '" + item.eventName + "' \nEvent ID: " + item.eventID + "\nEvent Password: " + item.eventPassword + "\nClick here to manage your event: " + linkToSend;
 			console.log(linkToSend, message);
 			Email.send({
 				to: item.administratorEmail,
