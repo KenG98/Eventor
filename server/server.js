@@ -1,6 +1,17 @@
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-    
-  });
-}
+Meteor.startup(function(){
+	Events = new Mongo.Collection('events');
+	Events.deny({
+		insert: function (userId, item) {
+			Email.send({
+				to: "kengarber98@gmail.com",
+				from: "me@me.com",
+				subject: "test",
+				text: "please work"
+			});
+			return false;
+		}
+	});
+	Events.allow({
+		insert: function (userId, item) { return true;}
+	});
+});
