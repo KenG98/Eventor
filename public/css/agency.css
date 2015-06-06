@@ -10,6 +10,7 @@ body {
     background-image: url(/header-bg2.jpg);
 }
 
+
 .text-muted {
     color: #777;
 }
@@ -20,7 +21,9 @@ body {
 
 p {
     font-size: 14px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 1.75;
+    color: white;
 }
 
 p.large {
