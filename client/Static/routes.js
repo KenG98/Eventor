@@ -25,3 +25,14 @@ Router.route('/eventpage', function () {
 Router.route('/howtouse', function () {
   this.render('howtouse');
 });
+
+Router.route('/contact', function () {
+  this.render('contact');
+});
+
+Router.route('/about', function () {
+  this.render('about');
+});
+
+
+
