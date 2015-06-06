@@ -1,7 +1,22 @@
 <template name="makeevent">
+	{{#unless doneMakingEvent}}
+		{{> eventform}}
+	{{else}}
+		{{> donemakingevent}}
+	{{/unless}}
+</template>
+
+
+<template name="eventform">
 	<form class="new-event">
+		Your Email: <input type="text" name="adminEmail"/> <br>
 		Event Name: <input type="text" name="eventName"/> <br>
-		Event Date: <input type="text" name="eventDate"/> <br>
+		Event Date: <input type="date" name="eventDate"/> Event Time: <input type="time" name="eventTime"> <br>
 		<input type="submit">
 	</form>
+</template>
+
+
+<template name="donemakingevent">
+	<p> Great! Your event details have been sent to you. The email includes your event ID and password. </p>
 </template>
