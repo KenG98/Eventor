@@ -29,6 +29,9 @@ body {
     font-weight: bold;
     padding-top: 10px;
 }
+#buttn{
+    text-align: center;
+}
 #butler{
     display: block;
     border-style: solid;
