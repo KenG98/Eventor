@@ -78,6 +78,9 @@ img.displayed {
 .text-primary {
     color: #fed136;
 }
+th{
+    text-align: center;
+}
 
 p {
     font-size: 18px;

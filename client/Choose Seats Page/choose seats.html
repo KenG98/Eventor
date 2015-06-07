@@ -1,5 +1,5 @@
 <template name="chooseseats">
-	{{#if loggedInSeats}}
+		{{#if loggedInSeats}}
 	{{> chooseSeatsActual}}
 	{{else}}
 	{{> logInSeats}}
@@ -8,19 +8,26 @@
 
 <template name="chooseSeatsActual">
 	<p>
-		<table>
-			<tr>
+		<table class="table table-hover">
+			<thead>
+				<tr>
 				<th>Crucial</th>
 				<th>Important</th>
 				<th>Person</th>
 			</tr>
+		</thead>
+		<tbody>
 			{{#each events}}
 			{{#each guests}}
 			{{> guest}}
 			{{/each}}
 			{{/each}}
+		</tbody>
 		</table>
 	</p>
+	<div id= "buttn">
+				<input class="btn btn-default btn-circle btn-xl" type="submit">
+			</div>
 </template>
 
 <template name="guest">
@@ -38,6 +45,8 @@
 			User ID: <input type="text" name="userIDBox"/> <br>
 			Event ID: <input type="text" name="eventIDBox"/> 
 		</p>
-		<input type="submit">
+		<div id= "buttn">
+				<input class="btn btn-default btn-circle btn-xl" type="submit">
+			</div>
 	</form>
 </template>
