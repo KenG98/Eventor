@@ -1,9 +1,15 @@
 <template name="eventpage">
 	<br><br>
-	<p>EVENTS!</p>
+	<p id="eventpagetext">What would you like to do?</p>
 	<div style="text-align:center;">
-	<a href="{{pathFor 'makeevent'}}"><button>make event</button></a>
-	<a href="{{pathFor 'manageevent'}}"><button>manage event</button></a>
-	<a href="{{pathFor 'chooseseats'}}"><button>choose seats</button></a>
-    </div>
+
+		<a href="{{pathFor 'makeevent'}}"><button type="button" class="btn btn-default btn-circle btn-xl">Host an Event</button></a>
+
+		<a href="{{pathFor 'manageevent'}}"><button type="button" class="btn btn-default btn-circle btn-xl">Manage Events</button></a>
+
+		<a href="{{pathFor 'chooseseats'}}"><button type="button" class="btn btn-default btn-circle btn-xl">Choose Seating</button></a>
+
+	</div>
+
+
 </template>
