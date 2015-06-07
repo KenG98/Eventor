@@ -33,6 +33,11 @@ Router.route('/contact', function () {
 Router.route('/about', function () {
   this.render('about');
 });
-
+Router.route('/loginToEdit', function () {
+  this.render('loginToEdit');
+});
+Router.route('/editEvent', function () {
+  this.render('editEvent');
+});
 
 
