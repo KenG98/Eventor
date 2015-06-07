@@ -98,6 +98,10 @@ p {
    padding-left: 75px;
    padding-right: 75px;
 }
+#howtousetext{
+    font-size: 28px;
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+}
 
 
 p.large {

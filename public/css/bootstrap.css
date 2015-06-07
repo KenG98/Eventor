@@ -1096,6 +1096,7 @@ input,
 button,
 select,
 textarea {
+  display: block;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
