@@ -1,5 +1,5 @@
 <template name="chooseseats">
-		{{#if loggedInSeats}}
+	{{#if loggedInSeats}}
 	{{> chooseSeatsActual}}
 	{{else}}
 	{{> logInSeats}}
@@ -7,35 +7,38 @@
 </template>
 
 <template name="chooseSeatsActual">
-	<p>
-		<table class="table table-hover">
-			<thead>
-				<tr>
-				<th>Crucial</th>
-				<th>Important</th>
-				<th>Person</th>
-			</tr>
-		</thead>
-		<tbody>
-			{{#each events}}
-			{{#each guests}}
-			{{> guest}}
-			{{/each}}
-			{{/each}}
-		</tbody>
-		</table>
-	</p>
-	<div id= "buttn">
-				<input class="btn btn-default btn-circle btn-xl" type="submit">
-			</div>
+	<form class="selectSeatmates">
+		<p>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Crucial</th>
+						<th>Important</th>
+						<th>Person</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					{{#each events}}
+					{{#each guests}}
+					{{> guest}}
+					{{/each}}
+					{{/each}}
+				</tbody>
+			</table>
+		</p>
+		<div id= "buttn">
+			<input class="btn btn-default btn-circle btn-xl" type="submit">
+		</div>
+	</form>
 </template>
 
 <template name="guest">
-		<tr>
-			<td><input type="checkbox" name="crucialBox"></td>
-			<td><input type="checkbox" name="wantBox"></td> 
-			<td>{{guestName}}</td>
-		</tr>
+	<tr>
+		<td><input type="checkbox" name="crucialBox" value="{{guestName}}"></td>
+		<td><input type="checkbox" name="wantBox" value="{{guestName}}"></td> 
+		<td>{{guestName}}</td>
+	</tr>
 </template>
 
 <template name="logInSeats">
@@ -46,7 +49,7 @@
 			Event ID: <input type="text" name="eventIDBox"/> 
 		</p>
 		<div id= "buttn">
-				<input class="btn btn-default btn-circle btn-xl" type="submit">
-			</div>
+			<input class="btn btn-default btn-circle btn-xl" type="submit">
+		</div>
 	</form>
 </template>

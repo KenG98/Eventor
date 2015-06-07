@@ -22,10 +22,10 @@ Template.editevent.events({
 	'submit .add-guest': function (event) {
 		var guestName = event.target.guestNameBox.value;
 		var guestEmail = event.target.guestEmailBox.value;
-		// var guestID = 
+		var guestID = Events.findOne({eventID: Session.get('currentEvent').eventID}).guests.length;
 		// console.log(Events.find(Session.get('currentEventId'));
 		// console.log(guestID);
-		Events.upsert(Session.get('currentEvent')._id, {$push: {guests: {guestName: guestName, guestEmail: guestEmail}}});
+		Events.upsert(Session.get('currentEvent')._id, {$push: {guests: {guestName: guestName, guestEmail: guestEmail, guestID: guestID}}});	
 		console.log(Session.get('currentEvent'));
 		event.target.guestNameBox.value = "";
  		event.target.guestEmailBox.value = "";

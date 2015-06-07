@@ -1,3 +1,14 @@
+// Meteor.methods({
+// 	addGuestRequest: function (eventID, guestID, guestRequest) {
+// 		// Events.insert(Session.get('guestnow'), {$set: Session.get('currentGuestRequest')});
+// 		// console.log(eventID, guestID, guestRequest);
+// 		var guest = Events.findOne({eventID: eventID}).guests[guestID];
+// 		guest.seatingPreference = guestRequest;
+// 		Events.upsert({eventID: eventID}, {$set: {guests: guest}});
+// 	}
+// });
+
+
 Meteor.startup(function(){
 	Events = new Mongo.Collection('events');
 	//
