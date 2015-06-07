@@ -1,3 +1,43 @@
 <template name="chooseseats">
+	{{#if loggedInSeats}}
+	{{> chooseSeatsActual}}
+	{{else}}
+	{{> logInSeats}}
+	{{/if}}
+</template>
 
+<template name="chooseSeatsActual">
+	<p>
+		<table>
+			<tr>
+				<th>Crucial</th>
+				<th>Important</th>
+				<th>Person</th>
+			</tr>
+			{{#each events}}
+			{{#each guests}}
+			{{> guest}}
+			{{/each}}
+			{{/each}}
+		</table>
+	</p>
+</template>
+
+<template name="guest">
+		<tr>
+			<td><input type="checkbox" name="crucialBox"></td>
+			<td><input type="checkbox" name="wantBox"></td> 
+			<td>{{guestName}}</td>
+		</tr>
+</template>
+
+<template name="logInSeats">
+	<form class="logintoseating">
+		<p>
+			Please enter some information before selecting your seats. <br>
+			User ID: <input type="text" name="userIDBox"/> <br>
+			Event ID: <input type="text" name="eventIDBox"/> 
+		</p>
+		<input type="submit">
+	</form>
 </template>
