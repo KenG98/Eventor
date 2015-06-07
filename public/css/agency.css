@@ -33,10 +33,10 @@ body {
     border-style: solid;
     border-width: thin;
     border-radius: 30px;
-    border-color: white;
+    border-color: black;
     margin-right: auto;
     margin-left: auto;
-    height: 250px;
+    height: 220px;
    /* border-radius: 50%;*/
 }
 button{
