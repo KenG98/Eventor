@@ -16,7 +16,20 @@ Meteor.startup(function(){
 			return false;
 		}
 	});
+
 	Events.allow({
-		insert: function (userId, item) { return true;}
+		insert: function (userId, doc) {
+			return true;
+		},
+		update: function (userId, doc, fields, modifier) {
+			return true;
+		},
+		remove: function (userId, doc) {
+			return true;
+		},
+		fetch: ['owner'],
+		transform: function () {
+			return true;
+		}
 	});
 });

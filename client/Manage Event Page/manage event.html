@@ -7,16 +7,28 @@
 </template>
 
 <template name="editevent">
+	<p><b>{{eventName}}</b></p>
+	<p><b>{{eventDate}}, {{eventTime}}</b></p>
 
-</template>
+	<p>{{#each guests}}
+		{{guestName}}, {{guestEmail}}
+		{{/each}} </p>
+	<form class="add-guest">
+			<p>
+				Guest Name: <input type="text" name="guestNameBox"/> <br>
+				Guest Email: <input type="text" name="guestEmailBox"/> <br>
+				<input type="submit">
+			</p>
+		</form>
+	</template>
 
-<template name="loginToEdit">
-	<p>Log in to edit. </p>
-	<form class="logInToEdit">
-		<p>
-			Event ID: <input type="text" name="eventIDBox"/> <br>
-			Event Password: <input type="text" name="eventPasswordBox"/> <br>
-			<input type="submit">
-		</p>
-	</form>
-</template>
+	<template name="loginToEdit">
+		<p>Log in to edit. </p>
+		<form class="logInToEdit">
+			<p>
+				Event ID: <input type="text" name="eventIDBox"/> <br>
+				Event Password: <input type="text" name="eventPasswordBox"/> <br>
+				<input type="submit">
+			</p>
+		</form>
+	</template>

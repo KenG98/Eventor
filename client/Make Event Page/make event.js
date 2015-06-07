@@ -13,6 +13,8 @@ Template.makeevent.events({
       var eventDate = event.target.eventDate.value;
       var eventTime = event.target.eventTime.value;
       var adminEmail = event.target.adminEmail.value;
+      var numPeoplePerTable = parseInt(event.target.numPeoplePerTable.value);
+      var numTables = parseInt(event.target.numTables.value);
 
       //necessary for emailing
       var eventID = Events.find().count();
@@ -23,7 +25,10 @@ Template.makeevent.events({
         administratorEmail: adminEmail,
         eventName: eventName,
         eventDate: eventDate,
-        eventTime: eventTime
+        eventTime: eventTime,
+        numPeoplePerTable: numPeoplePerTable,
+        numTables: numTables,
+        guests: []
       };
       Events.insert(newEvent);
 
