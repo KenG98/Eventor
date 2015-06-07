@@ -1,5 +1,5 @@
 <template name="chooseseats">
-		{{#if loggedInSeats}}
+	{{#if loggedInSeats}}
 	{{> chooseSeatsActual}}
 	{{else}}
 	{{> logInSeats}}
@@ -11,42 +11,54 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-				<th>Crucial</th>
-				<th>Important</th>
-				<th>Person</th>
-			</tr>
-		</thead>
-		<tbody>
-			{{#each events}}
-			{{#each guests}}
-			{{> guest}}
-			{{/each}}
-			{{/each}}
-		</tbody>
+					<th>Crucial</th>
+					<th>Important</th>
+					<th>Person</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each events}}
+				{{#each guests}}
+				{{> guest}}
+				{{/each}}
+				{{/each}}
+			</tbody>
 		</table>
 	</p>
+	
+
+
+
 	<div id= "buttn">
-				<input class="btn btn-default btn-circle btn-xl" type="submit">
-			</div>
+		<input class="btn btn-default btn-circle btn-xl" type="submit">
+	</div>
 </template>
 
 <template name="guest">
-		<tr>
-			<td><input type="checkbox" name="crucialBox"></td>
-			<td><input type="checkbox" name="wantBox"></td> 
-			<td>{{guestName}}</td>
-		</tr>
+	<tr>
+		<td><input type="checkbox" name="crucialBox"></td>
+		<td><input type="checkbox" name="wantBox"></td> 
+		<td>{{guestName}}</td>
+	</tr>
 </template>
 
 <template name="logInSeats">
-	<form class="logintoseating">
-		<p>
-			Please enter some information before selecting your seats. <br>
-			User ID: <input type="text" name="userIDBox"/> <br>
-			Event ID: <input type="text" name="eventIDBox"/> 
-		</p>
-		<div id= "buttn">
+	<div class="container">
+		<form role= "form" id="formlist" class="logintoseating">
+			<p>
+				Please enter some information before selecting your seats. <br>
+			</p>
+			<div class="form-group">
+				<label>User ID: </label>
+				<input type="text" class= "form-control" name="userIDBox"/>
+			</div>
+			<div class="form-group">
+				<label>Event ID:</label>
+				<input type="text" class= "form-control" name="eventIDBox"/>
+			</div>
+			<div id= "buttn">
 				<input class="btn btn-default btn-circle btn-xl" type="submit">
 			</div>
-	</form>
+		</form>
+	</div>
 </template>
