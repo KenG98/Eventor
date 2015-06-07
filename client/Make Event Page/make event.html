@@ -1,26 +1,47 @@
 <template name="makeevent">
 	{{#unless doneMakingEvent}}
-		{{> eventform}}
+	{{> eventform}}
 	{{else}}
-		{{> donemakingevent}}
+	{{> donemakingevent}}
 	{{/unless}}
 </template>
 
 
 <template name="eventform">
-	<form class="new-event">
-		<p>
-		Your Email: <input type="text" name="adminEmail"/> <br>
-		Event Name: <input type="text" name="eventName"/> <br>
-		Event Date: <input type="date" name="eventDate"/> <br>
-		Event Time: <input type="time" name="eventTime"> <br> 
-		Number of people per table: <input type="number" name="numPeoplePerTable"> <br> 
-		Number of tables: <input type="number" name="numTables"> <br> 
-	    </p>
-	    <div id= "buttn">
-		<input type="submit">
-	 </div>
+	<div class="container">
+	<form role ="form" id="formlist" class="new-event">
+		<p id="formdivide">EVENT INFO</p>
+		<div class="form-group">
+			<label>Your Email: </label>
+			<input type="text" class= "form-control" name="adminEmail"/>
+		</div>
+		<div class="form-group">
+			<label> Event Name: </label>
+			<input type="text" class= "form-control" name="eventName"/>
+		</div>
+		<div class= "form-group">
+			<label>Event Date: </label>
+			<input type="date" class= "form-control" name="eventDate"/> 
+		</div>
+		<div class="form-group">
+			<label>Event Time: </label>
+			<input type="time" class= "form-control" name="eventTime">  
+		</div>
+		<p id="formdivide">GUEST INFO</p>
+		<div class="form-group">
+			<label>	Number of people per table: </label>
+			<input type="number" class= "form-control" name="numPeoplePerTable"> 
+		</div>
+		<div class="form-group">
+			<label>	Number of tables: </label>
+			<input type="number" class= "form-control" name="numTables">
+		</div>
+
+		<div id= "buttn">
+			<input class="btn btn-default btn-circle btn-xl" type="submit">
+		</div>
 	</form>
+</div>
 </template>
 
 

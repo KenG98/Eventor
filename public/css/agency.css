@@ -10,7 +10,7 @@ body {
     background-image: url(/header-bg2.jpg);
 }
 #contacttext{
-    font-size: 22px;
+    font-size: 28px;
     font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 }
 #mainpagetext{
@@ -24,6 +24,17 @@ body {
     text-align: center;
     font-size: 2em;
     padding-bottom: 25px;
+
+}
+#formlist{
+    text-align: center;
+}
+#formdivide{
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: solid;
+    border-color: transparent transparent white transparent;
+    border-width: thin;
+    padding: 1%;
 
 }
 #butn{
@@ -69,7 +80,7 @@ img.displayed {
 }
 
 p {
-    font-size: 14px;
+    font-size: 18px;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     text-align: center;
     line-height: 1.75;
@@ -77,11 +88,11 @@ p {
 
 }
 #abouttext{
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     border-style: solid;
     border-width: thin;
-    border-radius: 30px;
+    border-radius: 28px;
    padding-top: 10px;
    padding-bottom: 10px;
    padding-left: 75px;
