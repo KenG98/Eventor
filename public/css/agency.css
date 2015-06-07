@@ -28,6 +28,17 @@ body {
     color:black;
     padding-top: 10px;
 }
+#butler{
+    display: block;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 30px;
+    border-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    height: 250px;
+   /* border-radius: 50%;*/
+}
 button{
     color: black;
     text-align: center;
